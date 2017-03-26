@@ -13,3 +13,7 @@ For further query on request-ip module visit https://www.npmjs.com/package/reque
 
 <b> How it Works </b>
 
+After all the setup,as you open the web page(index.html) is ready , a ajax get request to request-ip  is made which returns the client web ip address.
+
+
+
