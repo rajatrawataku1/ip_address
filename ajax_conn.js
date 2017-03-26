@@ -8,7 +8,7 @@ $(document).ready(function(){
 	{
 		"async":true,
 		"crossDomain" : true,
-		"url" :"http://localhost:3000/",
+		"url" :"http://192.168.171.194:3000/",
 		"method" : "GET"
 	}
 
@@ -16,8 +16,10 @@ $(document).ready(function(){
 
 		getting_resonse_ip=response;
 
-	    $("#ip_man").text("Your IP address is : "+response );
+		$("#ip_address_bar").append('<br> <br> <br> <br> <div class="col s12 center ip_style"></div>')
+		$("#ip_address_bar").children().text(" Your IP address is : " + response );
 
+		
 	})
 
 

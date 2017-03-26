@@ -8,10 +8,53 @@
 <script type="text/javascript" src="ajax_conn.js"> </script>
 </head>
 
+<style type="text/css">
+	
+	body{
+
+		background-color:  white;
+	}
+
+	.ip_style
+	{
+		font-size: 3.5vw;
+		font-weight: bold;
+
+	}
+
+	.loading_time_text
+	{
+		font-weight:bold;
+		font-size: 3vw;
+	}
+
+</style>
+
 <body>
 
-<p id="ip_man"></p>
 
+<div class="row" id="ip_address_bar"> 	
+</div>
+
+<div class="row" id="web_page_loading_time"> 
+</div>
 </body>
+
+<script type="text/javascript">
+
+
+	window.onload = function()
+	{
+		$("#web_page_loading_time").append(' <br> <br> <div class="col s12 center loading_time_text" ></div> ')
+
+		var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart; 
+
+		$("#web_page_loading_time").children().text("Web page loading time : "+ loadTime/1000 + " seconds");
+
+	}
+
+
+  
+</script>
 
 </html>
